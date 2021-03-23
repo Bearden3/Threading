@@ -1,4 +1,7 @@
-﻿using System;
+﻿//Mason bearden
+//Threading CW9
+
+using System;
 using System.Threading;
 using System.Collections.Generic;
 using System.Linq;
@@ -57,7 +60,10 @@ namespace Threading
             foreach(var j in piThreads) { accesor += j.goodDarts; }
             
             Console.WriteLine(accesor);
-            Console.WriteLine(4 * (accesor) / (darts));
+            decimal total = Convert.ToDecimal(darts * threads);
+            decimal good = Convert.ToDecimal(accesor);
+            decimal final = (4 * (good) / (total));
+            Console.WriteLine(final);
             Console.ReadKey();
         }
     }
